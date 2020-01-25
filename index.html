@@ -9,21 +9,72 @@
     html {
     scroll-behavior: smooth;
     }
-    body {
+    body,html {
         font-size:17px;
+        height: 100%;
+        background-color: lightblue;
     }
     code {
         color: rgb(50, 50, 50);
         background-color: rgb(235, 235, 235);
     }
+    #navbar {
+        position: fixed;
+        float: left;
+        height: 100%;
+        width: 8%;
+        background-color: rgb(235, 235, 235);
+        left: 0px;
+        top: 0px;
+        border: 1px black solid;
+    }
+    #content {
+        margin-left: 8%;
+        top: 0px;
+        
+    }
+    #all {
+        height: 100%;
+        width: 100%;
+    }
+    #linkpython {
+        text-decoration: underline;
+        color: blue;
+        font-weight: normal;
+        margin-left: 0px;
+    }
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.75);
+        font-weight: bold;
+        margin-left: 3%;
+        line-height: 130%;
+    }
     </style>
 </head>
 <body>
-<h4>Python - Podstawy:</h4>
+<div id="all">
+<div id="navbar">
+
+    <a href="#top">Python - Podstawy</a><br>
+    <a href="#instalacja">Instalacja</a><br>
+    <a href="#zmienne">Zmienne</a><br>
+    <a href="#warunki">If</a><br>
+    <a href="#else">Else</a><br>
+    <a href="#elif">Elif</a><br>
+    <a href="#and_or">And - or</a><br>
+    <a href="#if_short">Krótkie if</a><br>
+    <a href="#if_else_short">Krótkie if z else</a><br>
+    <a href="#pass">Pass</a><br>
+
+
+</div>
+<div id="content">
+<h2 id="top">Python - Podstawy:</h2>
     <!-- Instalacja -->
     <h3 id="instalacja">Instalacja pythona:</h3>
         <p>W celu uruchamiania plików pythona (rozszerzenie .py) należy najpierw zainstelować odpowiedni interpreter.</p>
-        <p>Można go pobrać ze strony <a href="python.org">python.org</a></p> 
+        <p>Można go pobrać ze strony <a id="linkpython" href="python.org">python.org</a></p> 
     <!-- Zmienne -->
     <h3 id="zmienne">Zmienne:</h3>
         <p>W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych.</p>
@@ -87,5 +138,8 @@ elif x < y:
 
 
 <br><br> Wkrótce zostana możliwość wyszukiwania sekcji poradnika, navbar, i dużo więcej zawartości
+
+</div>
+</div>
 </body>
 </html>
