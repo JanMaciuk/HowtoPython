@@ -78,45 +78,45 @@
 <h2 id="top">Python - Podstawy:</h2>
     <!-- Instalacja -->
     <h3 id="instalacja">Instalacja pythona:</h3>
-        <p>W celu uruchamiania plików pythona (rozszerzenie .py) należy najpierw zainstelować odpowiedni interpreter.</p>
-        <p>Można go pobrać ze strony <a id="linkpython" href="https://python.org">python.org</a></p> 
+        W celu uruchamiania plików pythona (rozszerzenie .py) należy najpierw zainstelować odpowiedni interpreter. <br>
+        Można go pobrać ze strony <a id="linkpython" href="https://python.org">python.org</a> <br> 
     <!-- Zmienne -->
     <h3 id="zmienne">Zmienne:</h3>
-        <p>W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych.</p>
-        <p>Zmienną tworzymy według tego schematu:</p>
+        W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych. <br>
+        Zmienną tworzymy według tego schematu: <br>
         <pre><code>nazwa_zmiennej = wartość_zmiennej</code></pre>
-        <p>na przykad:</p>
-        <code>x = 5</code>
-        <p>Zasady nazywania zmiennych:</p>
+        na przykad: <br>
+        <code>x = 5</code><br><br>
+        Zasady nazywania zmiennych: <br>
             <ul>
                 <li>Nazwa zmiennej może zawierać tylko znaki alfanumeryczne i znaki podkreślenia (A-z, 0-9 i _)</li>
                 <li>Nazwa zmiennej musi zaczynać się od litery lub znaku podkreślenia (nie może zaczynać się od cyfry)</li>
                 <li>W nazwach zmiennych rozróżniana jest wielkość liter (owca, Owca i OWCA to trzy różne zmienne)</li>
                
             </ul>
-        <p>zmienne w pythonie nie mają sztywno określonego typu, może on być zmieniany w każdej chwili:</p>
-        <code>x = 5</code> Teraz jest to zmienna typu integer.<p></p>
-        <code>x = "Kuba"</code> A teraz typu string.<p></p>
+        zmienne w pythonie nie mają sztywno określonego typu, może on być zmieniany w każdej chwili: <br>
+        <code>x = 5</code> Teraz jest to zmienna typu integer. <br>
+        <code>x = "Kuba"</code> A teraz typu string. <br>
     <!-- Warunki -->
     <h3 id="warunki">Warunki:</h3>
         <h4>if:</h4>
-        <p>Warunek jeśli stosujemy przy pomocy polecenia <code>if</code> na przykład:</p>
+        Warunek jeśli stosujemy przy pomocy polecenia <code>if</code> na przykład: <br>
         <pre><code>if 2 > 1:                        
     print("2 jest większe od 1") </code></pre>
-        <p>należy pamiętać od wcięciach w kodzie, ten przykład nie zadziała:</p>
+        należy pamiętać od wcięciach w kodzie, ten przykład nie zadziała: <br>
         <pre><code>if 2 > 1:                    
 print("2 jest większe od 1") </code></pre>
-        <p>W tym przykładzie print wykona się niezależnie od warunku if, wiele języków programowania używa nawiasów klamrowych, jednak python używa wcięć.</p>
+        W tym przykładzie print wykona się niezależnie od warunku if, wiele języków programowania używa nawiasów klamrowych, jednak python używa wcięć. <br>
         <h4 id="else">else:</h4>
-        <p>Polecenie <code>else</code> oznacza "wykonaj, jeśli poprzedni warunek nie jest prawdziwy"</p>
-        <p>Przykład zastosowania:</p>
+        Polecenie <code>else</code> oznacza "wykonaj, jeśli poprzedni warunek nie jest prawdziwy" <br>
+        Przykład zastosowania: <br>
         <pre><code>if x > y:                           
     print("x jest większe od y")    
 else:                               
     print("x nie jest większe od y")</code></pre>
         <h4 id="elif">elif:</h4>
-        <p>Polecenie <code>elif</code> oznacza "wykonaj, jeśli poprzedni warunek nie jest prawdziwy, a ten jest:"</p>
-        <p>Przykład zastosowania:</p>
+        Polecenie <code>elif</code> oznacza "wykonaj, jeśli poprzedni warunek nie jest prawdziwy, a ten jest:" <br>
+        Przykład zastosowania: <br>
         <pre><code>if x > y:                       
    print("x jest większe od y") 
 elif x == y                     
@@ -124,26 +124,41 @@ elif x == y
 elif x < y:                     
   print("x jest mniejsze od y") </code></pre>
         <h4 id="and_or">and i or</h4>
-        <p>Polecenia <code>and</code> i <code>or</code> oznaczają "i" i "lub"</p>
-        <p><code>and</code> oznacza że obydwa warunki muszą być prawdziwe, a <code>or</code> że przynajmniej jeden warunek musi być prawdziwy.</p>
+        Polecenia <code>and</code> i <code>or</code> oznaczają "i" i "lub" <br>
+        <code>and</code> oznacza że obydwa warunki muszą być prawdziwe, a <code>or</code> że przynajmniej jeden warunek musi być prawdziwy. <br>
         <h4 id="if_short">krótkie if:</h4>
-        <p>Jeżeli po <code>if</code> chcesz wykonać tylko jedno polecenie możesz umieścić je w tej samej lini co <code>if</code></p>
-        <p>Przykład zastosowania:</p>
+        Jeżeli po <code>if</code> chcesz wykonać tylko jedno polecenie możesz umieścić je w tej samej lini co <code>if</code> <br>
+        Przykład zastosowania: <br>
         <pre><code>if x > y: print("x jest większe od y")</code></pre>
         <h4 id="if_else_short">Krótkie if z else</h4>
-        <p>Do krótkiego <code>if</code> możemy dodać <code>else</code></p>
-        <p>przykład zastosowania:</p>
+        Do krótkiego <code>if</code> możemy dodać <code>else</code> <br>
+        przykład zastosowania: <br>
         <pre><code>print("x jest większe od y") if x > y else print("x nie jest większe od y")</code></pre>
         <h4 id="pass">Polecenie pass</h4>
-        <p>polecenie <code>if</code> nie może być puste,</p>
-        <p>jeżeli nie chcesz aby wykonywało kod, w celu uniknięcia błędu użyj polecenia <code>pass</code></p>
-        <p>przykład zastosowania:</p>
+        polecenie <code>if</code> nie może być puste, <br>
+        jeżeli nie chcesz aby wykonywało kod, w celu uniknięcia błędu użyj polecenia <code>pass</code> <br>
+        przykład zastosowania: <br>
         <pre><code>if x > y: pass</code></pre>
-        
-
-
-<br><br> Wkrótce zostana możliwość wyszukiwania sekcji poradnika, navbar, i dużo więcej zawartości
-
+        polecenia <code>pass</code> można używać także w funkcjach.
+        <br>
+        <!-- Funkcje-->
+    <h3 id="funkcje">Funkcje:</h3>
+            Funkcja jest to blok kodu który jest wykonywany tylko kiedy zostanie wywołany. <br>
+            Funkcje podczas wywoływania przyjmują argumenty których wartości później używają. <br>
+            Funkcja może zwracać dane po wykonaniu.<br>
+            <h4 id="funkcje_definiowanie">Definiowanie funkcji:<br></h4>
+            <pre><code>def NazwaFunkcji(argument1,argument2)</code></pre>
+            <h4 id="funkcje_wywoływanie">Wywoływanie funkcji:</h4>
+            Funkcje wywołujemy w następujący sposób:
+            <pre><code>NazwaFunkcji(WartośćArgumentu1,WartośćArgumentu2)</code></pre>
+            Wywołując funkcje musimy podać wartości dla wszytkich argumentów funkcji.<br>
+            Wartośći argumentów są przypisywane do argumentów po kolei, zgodnie z kolejnością ich definiowania.<br>
+            Czyli pierwsza wartość którą podamy zostanie przypisana do pierwszego argumentu który zdefiniujemy, druga do drugiego itd.<br>
+            Jeżeli chcemy podać wartości argumentów w innej kolejności musimy ręcznie określić do jakiego argumentu podajemy wartość.<br>
+            Robimy to w następujący sposób:
+            <pre><code>NazwaFunckji(argument2 = WartośćArgumentu2, argument1 = WartośćArgumentu1)</code></pre>
+            <h4 id="funkcje_domyślna_wartość">Domyślna wartość argumentu funkcji:</h4>
+            
 </div>
 </div>
 </body>
