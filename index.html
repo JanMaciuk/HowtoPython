@@ -43,6 +43,7 @@
         color: blue;
         font-weight: normal;
         margin-left: 0px;
+        border: 0;
     }
     a {
         text-decoration: none;
@@ -51,22 +52,25 @@
         margin-left: 3%;
         line-height: 130%;
     }
+    .NavLinkContainer {
+        border-bottom: 1px solid darkgrey;
+    }
     </style>
 </head>
 <body>
 <div id="all">
 <div id="navbar">
 
-    <a href="#top">Python - Podstawy</a><br>
-    <a href="#instalacja">Instalacja</a><br>
-    <a href="#zmienne">Zmienne</a><br>
-    <a href="#warunki">If</a><br>
-    <a href="#else">Else</a><br>
-    <a href="#elif">Elif</a><br>
-    <a href="#and_or">And - or</a><br>
-    <a href="#if_short">Krótkie if</a><br>
-    <a href="#if_else_short">Krótkie if z else</a><br>
-    <a href="#pass">Pass</a><br>
+    <div class="NavLinkContainer"> <a href="#top">Python - Podstawy</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#instalacja">Instalacja</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#zmienne">Zmienne</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#warunki">If</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#else">Else</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#elif">Elif</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#and_or">And - or</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#if_short">Krótkie if</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#if_else_short">Krótkie if z else</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#pass">Pass</a><br> </div>
 
 
 </div>
@@ -75,7 +79,7 @@
     <!-- Instalacja -->
     <h3 id="instalacja">Instalacja pythona:</h3>
         <p>W celu uruchamiania plików pythona (rozszerzenie .py) należy najpierw zainstelować odpowiedni interpreter.</p>
-        <p>Można go pobrać ze strony <a id="linkpython" href="python.org">python.org</a></p> 
+        <p>Można go pobrać ze strony <a id="linkpython" href="https://python.org">python.org</a></p> 
     <!-- Zmienne -->
     <h3 id="zmienne">Zmienne:</h3>
         <p>W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych.</p>
