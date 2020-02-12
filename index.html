@@ -135,7 +135,7 @@ elif x < y:
         przykład zastosowania: <br>
         <pre><code>print("x jest większe od y") if x > y else print("x nie jest większe od y")</code></pre>
         <h4 id="pass">Polecenie pass</h4>
-        polecenie <code>if</code> nie może być puste, <br>
+        polecenie <code>if</code> i funkcje nie mogą być puste, <br>
         jeżeli nie chcesz aby wykonywało kod, w celu uniknięcia błędu użyj polecenia <code>pass</code> <br>
         przykład zastosowania: <br>
         <pre><code>if x > y: pass</code></pre>
@@ -147,7 +147,7 @@ elif x < y:
             Funkcje podczas wywoływania przyjmują argumenty których wartości później używają. <br>
             Funkcja może zwracać dane po wykonaniu.<br>
             <h4 id="funkcje_definiowanie">Definiowanie funkcji:<br></h4>
-            <pre><code>def NazwaFunkcji(argument1,argument2)</code></pre>
+            <pre><code>def NazwaFunkcji(argument1,argument2):</code></pre>
             <h4 id="funkcje_wywoływanie">Wywoływanie funkcji:</h4>
             Funkcje wywołujemy w następujący sposób:
             <pre><code>NazwaFunkcji(WartośćArgumentu1,WartośćArgumentu2)</code></pre>
@@ -156,9 +156,21 @@ elif x < y:
             Czyli pierwsza wartość którą podamy zostanie przypisana do pierwszego argumentu który zdefiniujemy, druga do drugiego itd.<br>
             Jeżeli chcemy podać wartości argumentów w innej kolejności musimy ręcznie określić do jakiego argumentu podajemy wartość.<br>
             Robimy to w następujący sposób:
-            <pre><code>NazwaFunckji(argument2 = WartośćArgumentu2, argument1 = WartośćArgumentu1)</code></pre>
+            <pre><code>NazwaFunkcji(argument2 = WartośćArgumentu2, argument1 = WartośćArgumentu1)</code></pre>
             <h4 id="funkcje_domyślna_wartość">Domyślna wartość argumentu funkcji:</h4>
-            
+            Przy deklarowaniu funkcji możemy podać domyślną wartośc argumentów. <br>
+            W tym jednym wypadku możemy wywołać funckcje bez podawania wartości wszystkich argumentów. <br>
+            Jeżeli nie podamy wartości argumentu funckja użyje domyślnej wartości. <br>
+            Tworzenie funkcji z domyślnym argumentem:<br>
+            <pre><code>def NazwaFunkcji(argument1 = WartośćArgumentu1)</code></pre>
+            teraz możemy uruchomić funkcje bez podawania wartości argumentu, jeśli jednak ją podamy zostanie ona użyta zamiast domyślnej. <br>
+            <h4 id="funckje_return">Funkcja zwracająca dane:</h4>
+            Funkcja może zwracać dane, w tym celu należy użyć polecenia <code>return</code> <br>
+            Przykład zastosowania:
+            <pre><code>def NazwaFunkcji(argument1):
+    return argument1 + 1    </code></pre>
+        należy pamiętać o tym że polecenie <code>return</code> kończy wykonywanie się funkcji. <br>
+        Więc kod który znajduje się za poleceniem <code>return</code> nie zostanie wykonany.
 </div>
 </div>
 </body>
