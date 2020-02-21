@@ -75,6 +75,11 @@
     <div class="NavLinkContainer"> <a href="#funkcje_wywolywanie">Wywoływanie funkcji</a> </div>
     <div class="NavLinkContainer"> <a href="#funkcje_domyslna_wartosc">Domyślna wartość</a> </div>
     <div class="NavLinkContainer"> <a href="#funkcje_return">Zwracanie danych</a> </div>
+    <div class="NavLinkContainer"> <a href="#petle_while">Pętle while</a> </div>
+    <div class="NavLinkContainer"> <a href="#petle_for">Pętle for</a> </div>
+    <div class="NavLinkContainer"> <a href="#petle_range">range()</a> </div>
+    <div class="NavLinkContainer"> <a href="#petle_else">else</a> </div>
+    <div class="NavLinkContainer"> <a href="#petle_break">break</a> </div>
 
 </div>
 <div id="content">
@@ -127,54 +132,99 @@ elif x == y
 elif x < y:                     
   print("x jest mniejsze od y") </code></pre>
         <h4 id="and_or">and i or</h4>
-        Polecenia <code>and</code> i <code>or</code> oznaczają "i" i "lub" <br>
-        <code>and</code> oznacza że obydwa warunki muszą być prawdziwe, a <code>or</code> że przynajmniej jeden warunek musi być prawdziwy. <br>
+            Polecenia <code>and</code> i <code>or</code> oznaczają "i" i "lub" <br>
+            <code>and</code> oznacza że obydwa warunki muszą być prawdziwe, a <code>or</code> że przynajmniej jeden warunek musi być prawdziwy. <br>
         <h4 id="if_short">krótkie if:</h4>
-        Jeżeli po <code>if</code> chcesz wykonać tylko jedno polecenie możesz umieścić je w tej samej lini co <code>if</code> <br>
-        Przykład zastosowania: <br>
-        <pre><code>if x > y: print("x jest większe od y")</code></pre>
+            Jeżeli po <code>if</code> chcesz wykonać tylko jedno polecenie możesz umieścić je w tej samej lini co <code>if</code> <br>
+            Przykład zastosowania: <br>
+            <pre><code>if x > y: print("x jest większe od y")</code></pre>
         <h4 id="if_else_short">Krótkie if z else</h4>
-        Do krótkiego <code>if</code> możemy dodać <code>else</code> <br>
-        przykład zastosowania: <br>
-        <pre><code>print("x jest większe od y") if x > y else print("x nie jest większe od y")</code></pre>
+            Do krótkiego <code>if</code> możemy dodać <code>else</code> <br>
+            przykład zastosowania: <br>
+            <pre><code>print("x jest większe od y") if x > y else print("x nie jest większe od y")</code></pre>
         <h4 id="pass">Polecenie pass</h4>
-        polecenie <code>if</code> i funkcje nie mogą być puste, <br>
-        jeżeli nie chcesz aby wykonywało kod, w celu uniknięcia błędu użyj polecenia <code>pass</code> <br>
-        przykład zastosowania: <br>
-        <pre><code>if x > y: pass</code></pre>
-        polecenia <code>pass</code> można używać także w funkcjach.
-        <br>
+            polecenia <code>if</code>, pętle <code>for</code> i funkcje nie mogą być puste, <br>
+            jeżeli nie chcesz aby wykonywało kod, w celu uniknięcia błędu użyj polecenia <code>pass</code> <br>
+            przykład zastosowania: <br>
+            <pre><code>if x > y: pass</code></pre>
+            polecenia <code>pass</code> można używać także w funkcjach i pętlach.
+            <br>
         <!-- Funkcje-->
     <h3 id="funkcje">Funkcje:</h3>
             Funkcja jest to blok kodu który jest wykonywany tylko kiedy zostanie wywołany. <br>
             Funkcje podczas wywoływania przyjmują argumenty których wartości później używają. <br>
             Funkcja może zwracać dane po wykonaniu.<br>
             <h4 id="funkcje_definiowanie">Definiowanie funkcji:<br></h4>
-            Funkcje definiujemy w następujący sposób:<br>
-            <pre><code>def NazwaFunkcji(argument1,argument2):</code></pre>
+                Funkcje definiujemy w następujący sposób:<br>
+                <pre><code>def NazwaFunkcji(argument1,argument2):</code></pre>
             <h4 id="funkcje_wywolywanie">Wywoływanie funkcji:</h4>
-            Funkcje wywołujemy w następujący sposób:
-            <pre><code>NazwaFunkcji(WartośćArgumentu1,WartośćArgumentu2)</code></pre>
-            Wywołując funkcje musimy podać wartości dla wszytkich argumentów funkcji.<br>
-            Wartośći argumentów są przypisywane do argumentów po kolei, zgodnie z kolejnością ich definiowania.<br>
-            Czyli pierwsza wartość którą podamy zostanie przypisana do pierwszego argumentu który zdefiniujemy, druga do drugiego itd.<br>
-            Jeżeli chcemy podać wartości argumentów w innej kolejności musimy ręcznie określić do jakiego argumentu podajemy wartość.<br>
-            Robimy to w następujący sposób:
-            <pre><code>NazwaFunkcji(argument2 = WartośćArgumentu2, argument1 = WartośćArgumentu1)</code></pre>
+                Funkcje wywołujemy w następujący sposób:
+                <pre><code>NazwaFunkcji(WartośćArgumentu1,WartośćArgumentu2)</code></pre>
+                Wywołując funkcje musimy podać wartości dla wszytkich argumentów funkcji.<br>
+                Wartośći argumentów są przypisywane do argumentów po kolei, zgodnie z kolejnością ich definiowania.<br>
+                Czyli pierwsza wartość którą podamy zostanie przypisana do pierwszego argumentu który zdefiniujemy, druga do drugiego itd.<br>
+                Jeżeli chcemy podać wartości argumentów w innej kolejności musimy ręcznie określić do jakiego argumentu podajemy wartość.<br>
+                Robimy to w następujący sposób:
+                <pre><code>NazwaFunkcji(argument2 = WartośćArgumentu2, argument1 = WartośćArgumentu1)</code></pre>
             <h4 id="funkcje_domyslna_wartosc">Domyślna wartość argumentu funkcji:</h4>
-            Przy deklarowaniu funkcji możemy podać domyślną wartośc argumentów. <br>
-            W tym jednym wypadku możemy wywołać funckcje bez podawania wartości wszystkich argumentów. <br>
-            Jeżeli nie podamy wartości argumentu funckja użyje domyślnej wartości. <br>
-            Tworzenie funkcji z domyślnym argumentem:<br>
-            <pre><code>def NazwaFunkcji(argument1 = WartośćArgumentu1)</code></pre>
-            teraz możemy uruchomić funkcje bez podawania wartości argumentu, jeśli jednak ją podamy zostanie ona użyta zamiast domyślnej. <br>
-            <h4 id="funkcwje_return">Funkcja zwracająca dane:</h4>
-            Funkcja może zwracać dane, w tym celu należy użyć polecenia <code>return</code> <br>
-            Przykład zastosowania:
-            <pre><code>def NazwaFunkcji(argument1):
+                Przy deklarowaniu funkcji możemy podać domyślną wartośc argumentów. <br>
+                W tym jednym wypadku możemy wywołać funckcje bez podawania wartości wszystkich argumentów. <br>
+                Jeżeli nie podamy wartości argumentu funckja użyje domyślnej wartości. <br>
+                Tworzenie funkcji z domyślnym argumentem:<br>
+                <pre><code>def NazwaFunkcji(argument1 = WartośćArgumentu1)</code></pre>
+                teraz możemy uruchomić funkcje bez podawania wartości argumentu, jeśli jednak ją podamy zostanie ona użyta zamiast domyślnej. <br>
+            <h4 id="funkcje_return">Funkcja zwracająca dane:</h4>
+                Funkcja może zwracać dane, w tym celu należy użyć polecenia <code>return</code> <br>
+                Przykład zastosowania:
+                <pre><code>def NazwaFunkcji(argument1):
     return argument1 + 1    </code></pre>
-        należy pamiętać o tym że polecenie <code>return</code> kończy wykonywanie się funkcji. <br>
-        Więc kod który znajduje się za poleceniem <code>return</code> nie zostanie wykonany.
+                należy pamiętać o tym że polecenie <code>return</code> kończy wykonywanie się funkcji. <br>
+                Więc kod który znajduje się za poleceniem <code>return</code> nie zostanie wykonany. <br>
+
+    <!-- Pętle-->
+    <h3 id="petle">Pętle:</h3>
+        Python ma dwa rodzaje pętli, są to pętle <code>while</code> i <code>for</code><br>
+        <h4 id="petle_while">while:</h4>
+            Pętla <code>while</code> wykonuje kod dopóki warunek jest prawdziwy. <br>
+            Na poniższym przykładzie polecenie <code>print</code> będzie wykonywanie dopóki wartość zmiennej liczba będzie mniejsza od 5. <br>
+            z każdym wykonaniem pętla będzie zwiększać wartość zmiennej liczba o 1, dzięki temu pętla nie będzie wykonywać się w nieskończoność. <br>
+            <pre><code>liczba = 1       
+while liczba < 5:
+    print(liczba)
+    liczba += 1  </code></pre>
+        <h4 id="petle_for">for:</h4>
+            pętla <code>for</code> wykonuje się dla każdego elementu obiektu. <br>
+            przykład zastosowania:
+            <pre><code>ludzie = ["adam","piotr","zuza"]
+for x in ludzie:                
+    print(x)                    </code></pre>
+            powyższy kod zwróci każdy element listy <code>ludzie</code> osobno. <br>
+            <code>x</code> może mieć dowolną inną nazwe, jest zmienną której wartością jest element dla którego pętla się aktualnie wykonuje. <br>
+            jeżeli zamiast listy użyjemy napisu (string) pętla wykona się dla każdej litery osobno. <br>
+        <h4 id="petle_range">range:</h4>
+            zamiast listy bądź napisu w pętli <code>for</code> możemy podać funkcje <code>range()</code> <br>
+            przykład zastosowania:
+            <pre><code>for x in range(5):      
+    print("dzień dobry")</code></pre>
+            powyższa pętla wykona się 5 razy, od 0 do 4.
+        <h4 id="petle_else">else:</h4>
+            else można używać z <code>while</code> na tej samej zasadzie co z <cdoe>if</cdoe> <br>
+            polecenie <code>else</code> oznacza wykona jeśli warunek jest fałszywy. <br>
+            W przypadku pętli <code>for</code> polecenie <code>else</code> wykona się po zakończeniu pętli. <br>
+            Przykład zastosowania:
+            <pre><code>liczba = 1                                
+while liczba < 5:                         
+    print(liczba)                         
+    liczba += 1                           
+else:                                     
+    print("liczba nie jest mniejsza od 5")</code></pre>
+        <h4 id="petle_break">break:</h4>
+            polecenie <code>break</code> zatrzymuje wykonywanie się pętli. <br>
+            Kod umieszczony po tym poleceniu nie zostanie wykonany. <br>
+        
+            
+
+            <!--Todo: importowanie rozszerzeń i innych plików, listy, obsługa plików, pętle, typy danych, print na początek, większa czcionka-->
 </div>
 </div>
 </body>
