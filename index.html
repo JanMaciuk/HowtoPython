@@ -63,6 +63,7 @@
 
     <div class="NavLinkContainer"> <a href="#top">Python - Podstawy</a><br> </div>
     <div class="NavLinkContainer"> <a href="#instalacja">Instalacja</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#datatype">Typy danych</a><br> </div>
     <div class="NavLinkContainer"> <a href="#zmienne">Zmienne</a><br> </div>
     <div class="NavLinkContainer"> <a href="#warunki">If</a><br> </div>
     <div class="NavLinkContainer"> <a href="#else">Else</a><br> </div>
@@ -88,6 +89,20 @@
     <h3 id="instalacja">Instalacja pythona:</h3>
         W celu uruchamiania plików pythona (rozszerzenie .py) należy najpierw zainstelować odpowiedni interpreter. <br>
         Można go pobrać ze strony <a id="linkpython" href="https://python.org">python.org</a> <br> 
+    <h3 id="datatype">Typy danych:</h3>
+        python automatycznie wykrywa i przypisuje typ danych zmiennej, nie musimy (choć możemy) używać specjalnego polecenia aby określić typ danych. <br>
+        podstawowe typy danych w pythonie: <ul>
+            <li>string - tekst np. "abcd"</li>
+            <li>integer - liczba całkowita np. 2</li> 
+            <li>float - liczba niecałkowita np. 2.5</li> 
+            <li>list - lista np. ["adam", 5, "marek", 13]</li>
+            <li>tuple - niezmienna lista np. ("adam", 5, "marek", 13)</li>
+            <li>bool - prawda lub fałsz np. True</li>
+        </ul>
+        typ danych można sprawdzić przy uzyciu polecenia <code>type()</code>
+        przykład zastosowania:<pre><code>x = 5.5       
+print(type(x))</code></pre>
+        powyższy kod zwróci typ float
     <!-- Zmienne -->
     <h3 id="zmienne">Zmienne:</h3>
         W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych. <br>
