@@ -55,6 +55,9 @@
     .NavLinkContainer {
         border-bottom: 1px solid darkgrey;
     }
+    .bold_border {
+        border-top: 2px solid rgb(131, 131, 131);
+    }
     </style>
 </head>
 <body>
@@ -65,18 +68,20 @@
     <div class="NavLinkContainer"> <a href="#instalacja">Instalacja</a><br> </div>
     <div class="NavLinkContainer"> <a href="#datatype">Typy danych</a><br> </div>
     <div class="NavLinkContainer"> <a href="#zmienne">Zmienne</a><br> </div>
-    <div class="NavLinkContainer"> <a href="#warunki">If</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#print">Print</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#import">Import</a><br> </div>
+    <div class="NavLinkContainer bold_border"> <a href="#warunki">If</a><br> </div>
     <div class="NavLinkContainer"> <a href="#else">Else</a><br> </div>
     <div class="NavLinkContainer"> <a href="#elif">Elif</a><br> </div>
     <div class="NavLinkContainer"> <a href="#and_or">And - or</a><br> </div>
     <div class="NavLinkContainer"> <a href="#if_short">Krótkie if</a><br> </div>
     <div class="NavLinkContainer"> <a href="#if_else_short">Krótkie if z else</a><br> </div>
     <div class="NavLinkContainer"> <a href="#pass">Pass</a><br> </div>
-    <div class="NavLinkContainer"> <a href="#funkcje">Funkcje</a> </div>
+    <div class="NavLinkContainer bold_border"> <a href="#funkcje">Funkcje</a> </div>
     <div class="NavLinkContainer"> <a href="#funkcje_wywolywanie">Wywoływanie funkcji</a> </div>
     <div class="NavLinkContainer"> <a href="#funkcje_domyslna_wartosc">Domyślna wartość</a> </div>
     <div class="NavLinkContainer"> <a href="#funkcje_return">Zwracanie danych</a> </div>
-    <div class="NavLinkContainer"> <a href="#petle_while">Pętle while</a> </div>
+    <div class="NavLinkContainer bold_border"> <a href="#petle_while">Pętle while</a> </div>
     <div class="NavLinkContainer"> <a href="#petle_for">Pętle for</a> </div>
     <div class="NavLinkContainer"> <a href="#petle_range">range()</a> </div>
     <div class="NavLinkContainer"> <a href="#petle_else">else</a> </div>
@@ -124,6 +129,20 @@ print(type(x))</code></pre>
             polecenie <code>print()</code> służy do wyświetlania danych w konsoli. <br>
             Przykład zastosowania: <br>
             <code>print("Witam")</code>
+    
+    <h3 id="import">Import</h3>
+            polecenie <code>import</code> służy do importowania modułów i innych plików do naszego projektu. <br>
+            Używając <code>import pygame</code> importujemy bibliotekę pygame dostępną online, <br>
+            jest wiele pdobnych bibliotek które ułatwiają życie i znacznie poszerzają możliwości pythona. <br>
+            Tym samym sposobem możemy importować zmienne, funckcje, klasy itd. z innych naszych plików. <br> 
+            Załóżmy że w tym samym folderze co nasz program znajduje się inny plik o nazwie "UserMethods" <br>
+            Aby zaimportować wszystkie obiekty z tego pliku używamy <code>import UserMethods</code> pisanie rozszerzenia pliku nie jest potrzebne <br>
+            Jednak jeśli jesteśmy zainteresowani jedynie niektórymi obiektami z tego pliku, załóżmy że zmienną o nazwie "FirstNames" użyjemy poniższego kodu: <br>
+            <code>from UserMethods import FirstNames</code> najpierw podajemy plik z którego importujemy a potem co importujemy. <br>
+            Tak samo możemy postąpic z zewnętrznymi bibliotekami np. <code>from pygame import display</code> <br>
+            Warto wspomnieć o możliwości użycia innej nazwy biblioteki niż oryginalna. <br>
+            Polecenie <code>import pygame as pg</code> zaimportuje bibliotekę pygame jako "pg" <br>
+            Dzięki czemu aby użyć metody display zamiast <code>pygame.display</code> wystarczy napisać <code>pg.display</code>
     <!-- Warunki -->
     <h3 id="warunki">Warunki:</h3>
         <h4>if:</h4>
@@ -243,7 +262,7 @@ else:
         
             
 
-            <!--Todo: importowanie rozszerzeń i innych plików, listy, obsługa plików, print na początek, większa czcionka-->
+            <!--Todo: importowanie rozszerzeń i innych plików, obsługa plików-->
 </div>
 </div>
 </body>
