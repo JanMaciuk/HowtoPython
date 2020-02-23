@@ -86,6 +86,7 @@
     <div class="NavLinkContainer"> <a href="#petle_range">range()</a> </div>
     <div class="NavLinkContainer"> <a href="#petle_else">else</a> </div>
     <div class="NavLinkContainer"> <a href="#petle_break">break</a> </div>
+    <div class="NavLinkContainer bold_border"> <a href="#pliki">obsługa plików</a> </div>
 
 </div>
 <div id="content">
@@ -236,18 +237,18 @@ while liczba < 5:
             <pre><code>ludzie = ["adam","piotr","zuza"]
 for x in ludzie:                
     print(x)                    </code></pre>
-            powyższy kod zwróci każdy element listy <code>ludzie</code> osobno. <br>
+            Powyższy kod zwróci każdy element listy <code>ludzie</code> osobno. <br>
             <code>x</code> może mieć dowolną inną nazwe, jest zmienną której wartością jest element dla którego pętla się aktualnie wykonuje. <br>
-            jeżeli zamiast listy użyjemy napisu (string) pętla wykona się dla każdej litery osobno. <br>
+            Jeżeli zamiast listy użyjemy napisu (string) pętla wykona się dla każdej litery osobno. <br>
         <h4 id="petle_range">range:</h4>
-            zamiast listy bądź napisu w pętli <code>for</code> możemy podać funkcje <code>range()</code> <br>
-            przykład zastosowania:
+            Zamiast listy bądź napisu w pętli <code>for</code> możemy podać funkcje <code>range()</code> <br>
+            Przykład zastosowania:
             <pre><code>for x in range(5):      
     print("dzień dobry")</code></pre>
-            powyższa pętla wykona się 5 razy, od 0 do 4.
+            Powyższa pętla wykona się 5 razy, od 0 do 4.
         <h4 id="petle_else">else:</h4>
             else można używać z <code>while</code> na tej samej zasadzie co z <cdoe>if</cdoe> <br>
-            polecenie <code>else</code> oznacza wykona jeśli warunek jest fałszywy. <br>
+            Polecenie <code>else</code> oznacza wykona jeśli warunek jest fałszywy. <br>
             W przypadku pętli <code>for</code> polecenie <code>else</code> wykona się po zakończeniu pętli. <br>
             Przykład zastosowania:
             <pre><code>liczba = 1                                
@@ -257,12 +258,24 @@ while liczba < 5:
 else:                                     
     print("liczba nie jest mniejsza od 5")</code></pre>
         <h4 id="petle_break">break:</h4>
-            polecenie <code>break</code> zatrzymuje wykonywanie się pętli. <br>
+            Polecenie <code>break</code> zatrzymuje wykonywanie się pętli. <br>
             Kod umieszczony po tym poleceniu nie zostanie wykonany. <br>
         
-            
-
-            <!--Todo: importowanie rozszerzeń i innych plików, obsługa plików-->
+    <h3 id="pliki">Obsługa plików:</h3>        
+        <h4>wczytywanie plików:</h4>
+            Aby wczytać plik znajdujący się w tym samym folderze co program zależy użyć funkcji <code>open()</code> <br>
+            Przykład zastosowania: <br>
+            <code>plik = open("nazwapliku.txt")</code> <br>
+        <h4>odczyt plików:</h4>
+            Aby odczytać zawartość całego pliku należy użyć metody <code>read()</code> <br>
+            Przykład zastosowania: (po wczytaniu pliku jako "plik") <br>
+            <code>print(plik.read())</code> <br>
+            Adczytać fragment pliku możemy na 2 sposoby: <br>
+            Aby odczytać określoną ilość znaków z pliku jako argument metody <code>read()</code> należy podać ilość znaków które chcemy odczytać. <br>
+            Aby odczytać pierwszy wiersz należy użyć metody <code>readline()</code> <br>
+            Powyższe polecenie odczyta jeden wiersz pliku, <br>
+            jeżeli chcemy odczytać więcej wierszy należy je wykonać tyle razy ile wierszy chcemy odczytać (można do tego użyć pętli for) <br>
+            <!--Todo: obsługa plików, dokończyć range()-->
 </div>
 </div>
 </body>
