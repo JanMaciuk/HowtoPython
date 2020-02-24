@@ -70,6 +70,7 @@
     <div class="NavLinkContainer"> <a href="#zmienne">Zmienne</a><br> </div>
     <div class="NavLinkContainer"> <a href="#print">Print</a><br> </div>
     <div class="NavLinkContainer"> <a href="#import">Import</a><br> </div>
+    <div class="NavLinkContainer"> <a href="#error">Błędy</a><br> </div>
     <div class="NavLinkContainer bold_border"> <a href="#warunki">If</a><br> </div>
     <div class="NavLinkContainer"> <a href="#else">Else</a><br> </div>
     <div class="NavLinkContainer"> <a href="#elif">Elif</a><br> </div>
@@ -87,6 +88,7 @@
     <div class="NavLinkContainer"> <a href="#petle_else">else</a> </div>
     <div class="NavLinkContainer"> <a href="#petle_break">break</a> </div>
     <div class="NavLinkContainer bold_border"> <a href="#pliki">obsługa plików</a> </div>
+    <div class="NavLinkContainer"> <a href="#example">Przykładowy program</a><br> </div>
 
 </div>
 <div id="content">
@@ -108,7 +110,9 @@
         typ danych można sprawdzić przy uzyciu polecenia <code>type()</code>
         przykład zastosowania:<pre><code>x = 5.5       
 print(type(x))</code></pre>
-        powyższy kod zwróci typ float
+        powyższy kod zwróci typ float <br>
+        Możliwa jest konwersja danych jednego typu na inny. <br>
+        W tym celu należy użyć odpowiedniej funkcji np. <code>str(5)</code> lub <code>float("2.5")</code>
     <!-- Zmienne -->
     <h3 id="zmienne">Zmienne:</h3>
         W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych. <br>
@@ -135,7 +139,7 @@ print(type(x))</code></pre>
             polecenie <code>import</code> służy do importowania modułów i innych plików do naszego projektu. <br>
             Używając <code>import pygame</code> importujemy bibliotekę pygame dostępną online, <br>
             jest wiele pdobnych bibliotek które ułatwiają życie i znacznie poszerzają możliwości pythona. <br>
-            Tym samym sposobem możemy importować zmienne, funckcje, klasy itd. z innych naszych plików. <br> 
+            Tym samym sposobem możemy importować zmienne, funkccje, klasy itd. z innych naszych plików. <br> 
             Załóżmy że w tym samym folderze co nasz program znajduje się inny plik o nazwie "UserMethods" <br>
             Aby zaimportować wszystkie obiekty z tego pliku używamy <code>import UserMethods</code> pisanie rozszerzenia pliku nie jest potrzebne <br>
             Jednak jeśli jesteśmy zainteresowani jedynie niektórymi obiektami z tego pliku, załóżmy że zmienną o nazwie "FirstNames" użyjemy poniższego kodu: <br>
@@ -144,6 +148,21 @@ print(type(x))</code></pre>
             Warto wspomnieć o możliwości użycia innej nazwy biblioteki niż oryginalna. <br>
             Polecenie <code>import pygame as pg</code> zaimportuje bibliotekę pygame jako "pg" <br>
             Dzięki czemu aby użyć metody display zamiast <code>pygame.display</code> wystarczy napisać <code>pg.display</code>
+    <h3 id="error">Sprawdzanie błędów</h3>
+        Błędy są nieuniknione, zwłaszcza przy wszytkim co obsługuje inny użytkownik. <br>
+        Aby odpowiednio reagować na błędy, na przykład poprzez wyświetlenie odpowiedniego komunikatu błędu, <br>
+        należy użyć poleceń <code>try</code> i <code>except</code>. <br>
+        Taki program wykona kod zawarty w bloku <code>try</code>, a w razie wystąpienia błędu wykona kod zawarty w bloku <code>except</code>. <br>
+        Możemy użyk osobnych bloków <code>except</code> dla różnych typów błędów, <br>
+        w tym celu po poleceniu <code>except</code> piszemy nazwę błędu przy którym ma zostać wykonany ten blok. <br>
+        Jeżeli po poleceniu <code>except</code> nie będzie nazwy błędu, blok kodu wykona się przy każdym błędzie. <br>
+        Przykład zastosowania:
+        <pre><code>try:                               
+    print(a)                       
+except NameError:                  
+    print("zmienna a nie istnieje")
+except:                            
+    print("nieznany błąd")         </code></pre>
     <!-- Warunki -->
     <h3 id="warunki">Warunki:</h3>
         <h4>if:</h4>
@@ -275,7 +294,37 @@ else:
             Aby odczytać pierwszy wiersz należy użyć metody <code>readline()</code> <br>
             Powyższe polecenie odczyta jeden wiersz pliku, <br>
             jeżeli chcemy odczytać więcej wierszy należy je wykonać tyle razy ile wierszy chcemy odczytać (można do tego użyć pętli for) <br>
-            <!--Todo: obsługa plików, dokończyć range()-->
+        <h4>zapis do pliku:</h4>
+            Aby otworzyć istniejący plik z możliwością zapisu dodajemy drugi parametr to funkcji <code>open()</code> <br>
+            <code>"a"</code> - append: Daje do końca pliku. <br>
+            <code>"w"</code> - write: Nadpisuje zawartość pliku. <br>
+            Przykładowo polecenie <code>open("plik.txt","w")</code> otworzy plik "plik.txt" i podczas zapisu nadpisze jego zawartość. <br>
+            Jeżeli plik nie istnieje zostanie on automatycznie utworzony. <br>
+            Aby zapsiać dane do pliku używamy metody <code>write()</code> jako argument metody podajemy to co chcemy zapisać. <br>
+        <h4>zamknięcie pliku:</h4>
+            Kiedy skończymy operacje na pliku należy go zamknąć. <br>
+            Do tego celu służy metoda <code>close()</code>, metoda ta nie przyjmuje argumentów. <br>
+    <h3 id="example">Przykładowy program:</h3>
+        Oto przykładowy program w pythonie który otworzy istniejący plik "dane.txt", <br>
+        doda wszystkie wystepujące w nim liczby (1 na linie), nawet liczby niecałkowite (typ float). <br>
+        Po czym zapisze wynik dodawania do pliku "wynik.txt" (jeżeli plik nie istnieje to zostanie on utworzony)
+        <pre><code>dane = open("dane.txt")      
+wynik = open("wynik.txt","w")
+obliczenia = 0.0             
+for x in dane:               
+    obliczenia += float(x)   
+wynik.write(str(obliczenia)) 
+dane.close()                 
+wynik.close()                </code></pre>
+        Dwa najprawdopodobniejsze scenariusze błędu to: <br>
+        1: Plik dane.txt nie istnieje <br>
+        2: Dane wprowadzone do pliku dane.txt przez użytkownika nie są liczbą. <br>
+        Powyrzsze błędy są bardzo prawdopodobne przy nieprawidłowym użyciu, <br>
+        więc aby ułatwić użytkownikowi znalezienie błędu program nasłuchuje tych błędów i wyświetla odpowiednie komunikaty. <br>
+        Jeżeli uzytkownik okaże się szczególnie kreatywny w tworzeniu błędów i zdoła wywołać nieprzewidziany błąd, program wyświetli bardziej ogólny komunikat. <br>
+
+
+            <!--Autor: Jan Maciuk,     luty 2020-->
 </div>
 </div>
 </body>
