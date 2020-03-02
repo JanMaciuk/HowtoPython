@@ -94,12 +94,12 @@
 <div id="content">
 <h2 id="top">Python - Podstawy:</h2>
     <!-- Instalacja -->
-    <h3 id="instalacja">Instalacja pythona:</h3>
-        W celu uruchamiania plików pythona (rozszerzenie .py) należy najpierw zainstelować odpowiedni interpreter. <br>
+    <h3 id="instalacja">Instalacja Pythona:</h3>
+        W celu uruchamiania plików Pythona (rozszerzenie .py) należy najpierw zainstalować odpowiedni interpreter. <br>
         Można go pobrać ze strony <a id="linkpython" href="https://python.org">python.org</a> <br> 
     <h3 id="datatype">Typy danych:</h3>
-        python automatycznie wykrywa i przypisuje typ danych zmiennej, nie musimy (choć możemy) używać specjalnego polecenia aby określić typ danych. <br>
-        podstawowe typy danych w pythonie: <ul>
+        Python automatycznie wykrywa i przypisuje typ danych zmiennej, nie musimy (choć możemy) używać specjalnego polecenia, aby określić typ danych. <br>
+        podstawowe typy danych w Pythonie: <ul>
             <li>string - tekst np. "abcd"</li>
             <li>integer - liczba całkowita np. 2</li> 
             <li>float - liczba niecałkowita np. 2.5</li> 
@@ -107,10 +107,10 @@
             <li>tuple - niezmienna lista np. ("adam", 5, "marek", 13)</li>
             <li>bool - prawda lub fałsz np. True</li>
         </ul>
-        typ danych można sprawdzić przy uzyciu polecenia <code>type()</code>
+        typ danych można sprawdzić przy użyciu polecenia <code>type()</code>
         przykład zastosowania:<pre><code>x = 5.5       
 print(type(x))</code></pre>
-        powyższy kod zwróci typ float <br>
+        powyższy kod zwróci typ float. <br>
         Możliwa jest konwersja danych jednego typu na inny. <br>
         W tym celu należy użyć odpowiedniej funkcji np. <code>str(5)</code> lub <code>float("2.5")</code>
     <!-- Zmienne -->
@@ -118,7 +118,7 @@ print(type(x))</code></pre>
         W odróżnieniu od większości języków programowania Python nie ma komendy służącej do deklarowania zmiennych. <br>
         Zmienną tworzymy według tego schematu: <br>
         <pre><code>nazwa_zmiennej = wartość_zmiennej</code></pre>
-        na przykad: <br>
+        na przykład: <br>
         <code>x = 5</code><br><br>
         Zasady nazywania zmiennych: <br>
             <ul>
@@ -127,7 +127,7 @@ print(type(x))</code></pre>
                 <li>W nazwach zmiennych rozróżniana jest wielkość liter (owca, Owca i OWCA to trzy różne zmienne)</li>
                
             </ul>
-        zmienne w pythonie nie mają sztywno określonego typu, może on być zmieniany w każdej chwili: <br>
+        zmienne w Pythonie nie mają sztywno określonego typu, może on być zmieniany w każdej chwili: <br>
         <code>x = 5</code> Teraz jest to zmienna typu integer. <br>
         <code>x = "Kuba"</code> A teraz typu string. <br>
     <h4 id="print">Print:</h4>
@@ -138,18 +138,18 @@ print(type(x))</code></pre>
     <h3 id="import">Import</h3>
             polecenie <code>import</code> służy do importowania modułów i innych plików do naszego projektu. <br>
             Używając <code>import pygame</code> importujemy bibliotekę pygame dostępną online, <br>
-            jest wiele pdobnych bibliotek które ułatwiają życie i znacznie poszerzają możliwości pythona. <br>
-            Tym samym sposobem możemy importować zmienne, funkccje, klasy itd. z innych naszych plików. <br> 
-            Załóżmy że w tym samym folderze co nasz program znajduje się inny plik o nazwie "UserMethods" <br>
+            jest wiele podobnych bibliotek które ułatwiają życie i znacznie poszerzają możliwości Pythona. <br>
+            Tym samym sposobem możemy importować zmienne, funkcje, klasy itd. z innych naszych plików. <br> 
+            Załóżmy, że w tym samym folderze co nasz program znajduje się inny plik o nazwie "UserMethods" <br>
             Aby zaimportować wszystkie obiekty z tego pliku używamy <code>import UserMethods</code> pisanie rozszerzenia pliku nie jest potrzebne <br>
             Jednak jeśli jesteśmy zainteresowani jedynie niektórymi obiektami z tego pliku, załóżmy że zmienną o nazwie "FirstNames" użyjemy poniższego kodu: <br>
             <code>from UserMethods import FirstNames</code> najpierw podajemy plik z którego importujemy a potem co importujemy. <br>
-            Tak samo możemy postąpic z zewnętrznymi bibliotekami np. <code>from pygame import display</code> <br>
+            Tak samo możemy postąpić z zewnętrznymi bibliotekami np. <code>from pygame import display</code> <br>
             Warto wspomnieć o możliwości użycia innej nazwy biblioteki niż oryginalna. <br>
             Polecenie <code>import pygame as pg</code> zaimportuje bibliotekę pygame jako "pg" <br>
             Dzięki czemu aby użyć metody display zamiast <code>pygame.display</code> wystarczy napisać <code>pg.display</code>
     <h3 id="error">Sprawdzanie błędów</h3>
-        Błędy są nieuniknione, zwłaszcza przy wszytkim co obsługuje inny użytkownik. <br>
+        Błędy są nieuniknione, zwłaszcza przy wszystkim co obsługuje inny użytkownik. <br>
         Aby odpowiednio reagować na błędy, na przykład poprzez wyświetlenie odpowiedniego komunikatu błędu, <br>
         należy użyć poleceń <code>try</code> i <code>except</code>. <br>
         Taki program wykona kod zawarty w bloku <code>try</code>, a w razie wystąpienia błędu wykona kod zawarty w bloku <code>except</code>. <br>
@@ -218,15 +218,15 @@ elif x < y:
             <h4 id="funkcje_wywolywanie">Wywoływanie funkcji:</h4>
                 Funkcje wywołujemy w następujący sposób:
                 <pre><code>NazwaFunkcji(WartośćArgumentu1,WartośćArgumentu2)</code></pre>
-                Wywołując funkcje musimy podać wartości dla wszytkich argumentów funkcji.<br>
-                Wartośći argumentów są przypisywane do argumentów po kolei, zgodnie z kolejnością ich definiowania.<br>
+                Wywołując funkcje musimy podać wartości dla wszystkich argumentów funkcji.<br>
+                Wartości argumentów są przypisywane do argumentów po kolei, zgodnie z kolejnością ich definiowania.<br>
                 Czyli pierwsza wartość którą podamy zostanie przypisana do pierwszego argumentu który zdefiniujemy, druga do drugiego itd.<br>
                 Jeżeli chcemy podać wartości argumentów w innej kolejności musimy ręcznie określić do jakiego argumentu podajemy wartość.<br>
                 Robimy to w następujący sposób:
                 <pre><code>NazwaFunkcji(argument2 = WartośćArgumentu2, argument1 = WartośćArgumentu1)</code></pre>
             <h4 id="funkcje_domyslna_wartosc">Domyślna wartość argumentu funkcji:</h4>
-                Przy deklarowaniu funkcji możemy podać domyślną wartośc argumentów. <br>
-                W tym jednym wypadku możemy wywołać funckcje bez podawania wartości wszystkich argumentów. <br>
+                Przy deklarowaniu funkcji możemy podać domyślną wartość argumentów. <br>
+                W tym jednym wypadku możemy wywołać funkcje bez podawania wartości wszystkich argumentów. <br>
                 Jeżeli nie podamy wartości argumentu funckja użyje domyślnej wartości. <br>
                 Tworzenie funkcji z domyślnym argumentem:<br>
                 <pre><code>def NazwaFunkcji(argument1 = WartośćArgumentu1)</code></pre>
@@ -257,7 +257,7 @@ while liczba < 5:
 for x in ludzie:                
     print(x)                    </code></pre>
             Powyższy kod zwróci każdy element listy <code>ludzie</code> osobno. <br>
-            <code>x</code> może mieć dowolną inną nazwe, jest zmienną której wartością jest element dla którego pętla się aktualnie wykonuje. <br>
+            <code>x</code> może mieć dowolną inną nazwę, jest zmienną której wartością jest element dla którego pętla się aktualnie wykonuje. <br>
             Jeżeli zamiast listy użyjemy napisu (string) pętla wykona się dla każdej litery osobno. <br>
         <h4 id="petle_range">range:</h4>
             Zamiast listy bądź napisu w pętli <code>for</code> możemy podać funkcje <code>range()</code> <br>
@@ -289,7 +289,7 @@ else:
             Aby odczytać zawartość całego pliku należy użyć metody <code>read()</code> <br>
             Przykład zastosowania: (po wczytaniu pliku jako "plik") <br>
             <code>print(plik.read())</code> <br>
-            Adczytać fragment pliku możemy na 2 sposoby: <br>
+            Odczytać fragment pliku możemy na 2 sposoby: <br>
             Aby odczytać określoną ilość znaków z pliku jako argument metody <code>read()</code> należy podać ilość znaków które chcemy odczytać. <br>
             Aby odczytać pierwszy wiersz należy użyć metody <code>readline()</code> <br>
             Powyższe polecenie odczyta jeden wiersz pliku, <br>
@@ -300,13 +300,13 @@ else:
             <code>"w"</code> - write: Nadpisuje zawartość pliku. <br>
             Przykładowo polecenie <code>open("plik.txt","w")</code> otworzy plik "plik.txt" i podczas zapisu nadpisze jego zawartość. <br>
             Jeżeli plik nie istnieje zostanie on automatycznie utworzony. <br>
-            Aby zapsiać dane do pliku używamy metody <code>write()</code> jako argument metody podajemy to co chcemy zapisać. <br>
+            Aby zapisać dane do pliku używamy metody <code>write()</code> jako argument metody podajemy to co chcemy zapisać. <br>
         <h4>zamknięcie pliku:</h4>
             Kiedy skończymy operacje na pliku należy go zamknąć. <br>
             Do tego celu służy metoda <code>close()</code>, metoda ta nie przyjmuje argumentów. <br>
     <h3 id="example">Przykładowy program:</h3>
-        Oto przykładowy program w pythonie który otworzy istniejący plik "dane.txt", <br>
-        doda wszystkie wystepujące w nim liczby (1 na linie), nawet liczby niecałkowite (typ float). <br>
+        Oto przykładowy program w Pythonie który otworzy istniejący plik "dane.txt", <br>
+        doda wszystkie występujące w nim liczby (1 na linie), nawet liczby niecałkowite (typ float). <br>
         Po czym zapisze wynik dodawania do pliku "wynik.txt" (jeżeli plik nie istnieje to zostanie on utworzony)
         <pre><code>dane = open("dane.txt")      
 wynik = open("wynik.txt","w")
@@ -319,9 +319,9 @@ wynik.close()                </code></pre>
         Dwa najprawdopodobniejsze scenariusze błędu to: <br>
         1: Plik dane.txt nie istnieje <br>
         2: Dane wprowadzone do pliku dane.txt przez użytkownika nie są liczbą. <br>
-        Powyrzsze błędy są bardzo prawdopodobne przy nieprawidłowym użyciu, <br>
+        Powyższe błędy są bardzo prawdopodobne przy nieprawidłowym użyciu, <br>
         więc aby ułatwić użytkownikowi znalezienie błędu program nasłuchuje tych błędów i wyświetla odpowiednie komunikaty. <br>
-        Jeżeli uzytkownik okaże się szczególnie kreatywny w tworzeniu błędów i zdoła wywołać nieprzewidziany błąd, program wyświetli bardziej ogólny komunikat. <br>
+        Jeżeli użytkownik okaże się szczególnie kreatywny w tworzeniu błędów i zdoła wywołać nieprzewidziany błąd, program wyświetli bardziej ogólny komunikat. <br>
 
 
             <!--Autor: Jan Maciuk,     luty 2020-->
