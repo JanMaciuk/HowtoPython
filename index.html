@@ -308,14 +308,24 @@ else:
         Oto przykładowy program w Pythonie który otworzy istniejący plik "dane.txt", <br>
         doda wszystkie występujące w nim liczby (1 na linie), nawet liczby niecałkowite (typ float). <br>
         Po czym zapisze wynik dodawania do pliku "wynik.txt" (jeżeli plik nie istnieje to zostanie on utworzony)
-        <pre><code>dane = open("dane.txt")      
-wynik = open("wynik.txt","w")
-obliczenia = 0.0             
-for x in dane:               
-    obliczenia += float(x)   
-wynik.write(str(obliczenia)) 
-dane.close()                 
-wynik.close()                </code></pre>
+        <pre><code>try:                                                                                                                         
+    dane = open("dane.txt")                                                                                                  
+    wynik = open("wynik.txt","w")                                                                                            
+    obliczenia = 0.0                                                                                                         
+    for x in dane:                                                                                                           
+        obliczenia += float(x)                                                                                               
+    wynik.write(str(obliczenia))                                                                                             
+    dane.close()                                                                                                             
+    wynik.close()                                                                                                            
+except ValueError:                                                                                                           
+    wynik = open("wynik.txt","w")                                                                                            
+    wynik.write("Wystąpił błąd! Jedna z wartości z pliku dane.txt nie jest liczbą.")                                         
+except FileNotFoundError:                                                                                                    
+    wynik = open("wynik.txt","w")                                                                                            
+    wynik.write("Wystąpił błąd! Plik dane.txt nie istnieje. Sprawdź czy znajduje się on w tej samej lokalizacji co program.")
+except:                                                                                                                      
+    wynik = open("wynik.txt","w")                                                                                            
+    wynik.write("Wystąpił nieznany błąd.")                                                                                   </code></pre>
         Dwa najprawdopodobniejsze scenariusze błędu to: <br>
         1: Plik dane.txt nie istnieje <br>
         2: Dane wprowadzone do pliku dane.txt przez użytkownika nie są liczbą. <br>
